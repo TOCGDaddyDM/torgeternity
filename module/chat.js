@@ -40,9 +40,9 @@ function onPossibility(event) {
     //Roll for Possibility
     var diceroll = new Roll('1d20x10x20').roll();
     if (diceroll.total < 10) {
-        test.possibilityTotal = 10
+        test.possibilityTotal = parseInt(test.possibilityTotal) + 10
     } else {
-        test.possibilityTotal = diceroll.total
+        test.possibilityTotal = parseInt(test.possibilityTotal) + diceroll.total
     };
     // diceroll.toMessage();
     test.diceroll = diceroll

@@ -434,9 +434,9 @@ export function renderSkillChat(test,diceroll) {
       test.dramaStyle = "pointer-events:none;color:gray"
    }
 
-   if (test.possibilityTotal > 0) {
-      test.possibilityStyle = "pointer-events:none;color:gray"
-   }
+   // if (test.possibilityTotal > 0) {
+   //   test.possibilityStyle = "pointer-events:none;color:gray"
+   // }
 
    if (test.upTotal > 0) (
       test.upStyle = "pointer-events:none;color:gray"
