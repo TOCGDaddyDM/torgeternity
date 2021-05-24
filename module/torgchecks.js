@@ -361,7 +361,7 @@ export function renderSkillChat(test,diceroll) {
 
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
-      test.resultText = `${game.i18n.localize("torgeternity.roll.Mishap")}`;
+      test.resultText = `${game.i18n.localize("torgeternity.roll.failure")}/${game.i18n.localize("torgeternity.roll.mishap")}`;
       test.actionTotalLabel = "display:none";
    } else {
       if (test.testType === "activeDefense") {
@@ -426,6 +426,14 @@ export function renderSkillChat(test,diceroll) {
    };
 
    // Disable unavailable menu options
+   // First, disable options if test failed
+   if (test.rollTotal === 1) {
+      test.possibilityStyle = "pointer-events:none;color:gray"
+      test.upStyle = "pointer-events:none;color:gray"
+      test.heroStyle = "pointer-events:none;color:gray"
+      test.dramaStyle = "pointer-events:none;color:gray"
+   }
+
    if (test.possibilityTotal > 0) {
       test.possibilityStyle = "pointer-events:none;color:gray"
    }
