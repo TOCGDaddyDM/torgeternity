@@ -361,7 +361,7 @@ export function renderSkillChat(test,diceroll) {
 
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
-      test.resultText = "Mishap";
+      test.resultText = `${game.i18n.localize("torgeternity.roll.Mishap")}`;
       test.actionTotalLabel = "display:none";
    } else {
       if (test.testType === "activeDefense") {

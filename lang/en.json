@@ -1,5 +1,8 @@
 {
     "torgeternity":{
+        "roll":{
+            "Mishap": "Mishap"
+        },
         "attributes": {
             "charisma": "Charisma",
             "dexterity": "Dexterity",
