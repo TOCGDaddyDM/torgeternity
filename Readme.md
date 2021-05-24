@@ -15,6 +15,7 @@ v. 1.0.1
 - Updated test chat message localization
 - Updated test chat message so "1" roll totals also reflect a failed test
 - Modified chat message and test system so that multiple possibilities can be spent on a roll
+- Various updates to archetype tokens to make them more consistent and in line with best practices
 
 v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
