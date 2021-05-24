@@ -32,12 +32,12 @@ export function prepareActiveEffectCategories(effects) {
         },
         passive: {
         type: "passive",
-        label: "Passive Effects",
+        label: `${game.i18n.localize("torgeternity.sheetLabels.passiveEffects")}`,
         effects: []
         },
         inactive: {
         type: "inactive",
-        label: "Inactive Effects",
+        label: `${game.i18n.localize("torgeternity.sheetLabels.inactiveEffects")}`,
         effects: []
         }
     };
