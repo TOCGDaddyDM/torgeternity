@@ -12,6 +12,12 @@ v. 1.0.1
 - Changed character sheet backgrounds to allow for more contrast with text (thanks Forja!)
 - Updated Spanish localization (thanks again Forja!)
 - Updated player list UI so that GM can take and give possibilities to players
+- Updated test chat message localization
+- Updated test chat message so "1" roll totals also reflect a failed test
+- Modified chat message and test system so that multiple possibilities can be spent on a roll
+- Various updates to archetype tokens to make them more consistent and in line with best practices
+- Fixed issue where NaN error was displaying when clicking on attribute lines of skill list (and where
+  list was filtered to known skills)
 
 v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
