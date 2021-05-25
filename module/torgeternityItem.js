@@ -48,50 +48,50 @@ export default class torgeternityItem extends Item {
 
       // get Bonus number
       if (diceroll == 1) {
-         var messageContent = `Failure (Check for Mishap)`;
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result1")}`;
          var bonus = -10;
       } else if (diceroll == 2) {
-         var messageContent = 'Bonus: -8 (Disconnect if 4 Case)';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result2")}`;
          var bonus = -8;
       } else if (diceroll <= 4) {
-         var messageContent = 'Bonus: -6 (Disconnect if 4 Case)';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result3_4")}`;
          var bonus = -6;
       } else if (diceroll <= 6) {
-         var messageContent = 'Bonus: -4';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result5_6")}`;
          var bonus = -4;
       } else if (diceroll <= 8) {
-         var messageContent = 'Bonus: -2';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result7_8")}`;
          var bonus = -2;
       } else if (diceroll <= 10) {
-         var messageContent = 'Bonus: -1';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result9_10")}`;
          var bonus = -1;
       } else if (diceroll <= 12) {
-         var messageContent = 'Bonus: +0';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result111_12")}`;
          var bonus = 0;
       } else if (diceroll <= 14) {
-         var messageContent = 'Bonus +1';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result13_14")}`;
          var bonus = 1;
       } else if (diceroll == 15) {
-         var messageContent = 'Bonus +2';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result15")}`;
          var bonus = 2;
       } else if (diceroll == 16) {
-         var messageContent = 'Bonus: +3';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result16")}`;
          var bonus = 3;
       } else if (diceroll == 17) {
-         var messageContent = 'Bonus: +4';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result17")}`;
          var bonus = 4;
       } else if (diceroll == 18) {
-         var messageContent = 'Bonus: +5';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result18")}`;
          var bonus = 5;
       } else if (diceroll == 19) {
-         var messageContent = 'Bonus: +6';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result19")}`;
          var bonus = 6;
       } else if (diceroll == 20) {
-         var messageContent = 'Bonus: +7';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result20")}`;
          var bonus = 7;
       } else if (diceroll >= 21) {
          var bonus = 7 + Math.ceil((diceroll - 20) / 5)
-         var messageContent = `Bonus:` + bonus;
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result_plus20")}` + bonus;
       }
 
       // Calculate base damage
@@ -210,51 +210,52 @@ export default class torgeternityItem extends Item {
 
       // get Bonus number
       if (diceroll == 1) {
-         var messageContent = `Failure (Check for Mishap)`;
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result1")}`;
          var bonus = -10;
       } else if (diceroll == 2) {
-         var messageContent = 'Bonus: -8 (Disconnect if 4 Case)';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result2")}`;
          var bonus = -8;
       } else if (diceroll <= 4) {
-         var messageContent = 'Bonus: -6 (Disconnect if 4 Case)';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result3_4")}`;
          var bonus = -6;
       } else if (diceroll <= 6) {
-         var messageContent = 'Bonus: -4';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result5_6")}`;
          var bonus = -4;
       } else if (diceroll <= 8) {
-         var messageContent = 'Bonus: -2';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result7_8")}`;
          var bonus = -2;
       } else if (diceroll <= 10) {
-         var messageContent = 'Bonus: -1';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result9_10")}`;
          var bonus = -1;
       } else if (diceroll <= 12) {
-         var messageContent = 'Bonus: +0';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result111_12")}`;
          var bonus = 0;
       } else if (diceroll <= 14) {
-         var messageContent = 'Bonus +1';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result13_14")}`;
          var bonus = 1;
       } else if (diceroll == 15) {
-         var messageContent = 'Bonus +2';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result15")}`;
          var bonus = 2;
       } else if (diceroll == 16) {
-         var messageContent = 'Bonus: +3';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result16")}`;
          var bonus = 3;
       } else if (diceroll == 17) {
-         var messageContent = 'Bonus: +4';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result17")}`;
          var bonus = 4;
       } else if (diceroll == 18) {
-         var messageContent = 'Bonus: +5';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result18")}`;
          var bonus = 5;
       } else if (diceroll == 19) {
-         var messageContent = 'Bonus: +6';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result19")}`;
          var bonus = 6;
       } else if (diceroll == 20) {
-         var messageContent = 'Bonus: +7';
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result20")}`;
          var bonus = 7;
       } else if (diceroll >= 21) {
          var bonus = 7 + Math.ceil((diceroll - 20) / 5)
-         var messageContent = `Bonus:` + bonus;
+         var messageContent = `${game.i18n.localize("torgeternity.roll.result_plus20")}` + bonus;
       }
+
 
       // Retrieve the applicable skill value from the current actor
       var skillToUse = this.actor.data.data.skills[this.data.data.skill];

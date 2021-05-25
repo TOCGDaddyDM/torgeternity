@@ -1,7 +1,22 @@
 {
     "torgeternity":{
         "roll":{
-            "Mishap": "Mishap"
+            "Mishap": "Mishap",
+            "result1":"Failure (Check for Mishap)",
+            "result2":"Bonus: -8 (Disconnect if 4 Case)",
+            "result3_4":"Bonus: -6 (Disconnect if 4 Case)",
+            "result5_6":"Bonus: -4",
+            "result7_8":"Bonus: -2",
+            "result9_10":"Bonus: -1",
+            "result11_12":"Bonus: +0",
+            "result13_14":"Bonus +1",
+            "result15":"Bonus +2",
+            "result16":"Bonus +3",
+            "result17":"Bonus +4",
+            "result18":"Bonus +5",
+            "result19":"Bonus +6",
+            "result20":"Bonus +7",
+            "result_plus20":"Bonus(>20) +"
         },
         "attributes": {
             "charisma": "Charisma",
