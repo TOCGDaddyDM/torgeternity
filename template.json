@@ -383,7 +383,8 @@
                 "description": "",
                 "sizeBonus": 0
             },
-            "editstate": ""
+            "editstate": "",
+            "cardImage": ""
         }
 
     },

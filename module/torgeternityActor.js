@@ -1,16 +1,16 @@
-export default class torgeternityActor extends Actor {    
-
+export default class torgeternityActor extends Actor {
 
     
+
     prepareBaseData() {
-           
-        if (this._data.type === "stormknight") { 
-          mergeObject(this.data.token, {
-           
-            actorLink: true,
-            disposition: 1
-          }, {overwrite: true});
-          
+
+        if (this._data.type === "stormknight") {
+            mergeObject(this.data.token, {
+
+                actorLink: true,
+                disposition: 1
+            }, { overwrite: true });
+
 
             var skillset = this.data.data.skills;
 
@@ -26,7 +26,7 @@ export default class torgeternityActor extends Actor {
                     skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
                 }
             }
-            
+
             // Set Defensive values for Storm Knight sheet
             if (skillset.dodge.value) {
                 this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
@@ -39,9 +39,9 @@ export default class torgeternityActor extends Actor {
             } else {
                 this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
             };
-            
+
             if (skillset.unarmedCombat.value) {
-            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
+                this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
             } else {
                 this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
             };
@@ -87,7 +87,7 @@ export default class torgeternityActor extends Actor {
             this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
 
             //Set axioms based on home reality
-            switch(this.data.data.other.cosm) {
+            switch (this.data.data.other.cosm) {
                 case "coreEarth":
                     this.data.data.axioms.magic = 9;
                     this.data.data.axioms.social = 23;
@@ -143,9 +143,9 @@ export default class torgeternityActor extends Actor {
                     this.data.data.axioms.tech = "";
                     break;
             }
-            
+
             //Set clearance level
-            
+
             if (this.data.data.xp.earned < 50) {
                 this.data.data.details.clearance = "alpha";
             } else if (this.data.data.xp.earned < 200) {
@@ -160,7 +160,7 @@ export default class torgeternityActor extends Actor {
 
             //Set armor and shield toggle states
             var i;
-            for (i=0; i < this.data.items.length; i++) {
+            for (i = 0; i < this.data.items.length; i++) {
                 var item = this.data.items[i];
                 if (item.type === "shield") {
                     if (item.data.equipped === true) {
@@ -178,21 +178,21 @@ export default class torgeternityActor extends Actor {
                 }
             }
 
-        };
+        }
 
         //Set unknown edit states to none
         if (this.data.data.editstate === undefined) {
             this.data.data.editstate = "inline";
-        }; 
+        };
 
     }
 
     applyActiveEffects() {
         super.applyActiveEffects();
-                
+
         var i;
         const effects = this.data.effects
-        for (i=0; i < effects.length; i++) {
+        for (i = 0; i < effects.length; i++) {
             if (effects[i].flags.hasOwnProperty("core")) {
                 if (effects[i].flags.core.statusId === "stymied") {
                     this.data.data.stymiedModifier = -2;

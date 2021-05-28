@@ -193,6 +193,7 @@
             "racial": "Racial"
         },
         "sheetLabels": {
+            "threatCard":"threat card",
             "stormknight":"Stormknight",
             "stats": "Stats",
             "perks": "Perks",

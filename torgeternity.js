@@ -19,6 +19,7 @@ import { registerTorgSettings } from "./module/settings.js";
 import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import { checkCardSupport } from "./module/checkCardSupport.js";
+import { displayCard } from "./module/displayCard.js";
 
 
 Hooks.once("init", async function () {
@@ -75,7 +76,7 @@ Hooks.once("init", async function () {
 
 
   //----------debug hooks
- // CONFIG.debug.hooks = true;
+  // CONFIG.debug.hooks = true;
   /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
@@ -105,7 +106,7 @@ Hooks.on("ready", async function () {
   await checkCardSupport();
 
   //-----applying GM possibilities pool if absent
-  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')){
+  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
     game.user.setFlag('torgeternity', 'GMpossibilities', 0)
   }
 
@@ -385,7 +386,22 @@ Hooks.on("renderActorSheet", (app, html, data) => {
   alphabSort(html, data);
 });
 
-Hooks.on('updateActor', (actor, data, options, id)=>{
+Hooks.on('updateActor', (actor, data, options, id) => {
   //updating playerList with users character up-to-date data
   ui.players.render(true);
+})
+let ctrlPressed = false;
+document.addEventListener('keydown', (event) => {
+  if (event.code == "ControlLeft") {
+    ctrlPressed = true;
+  }
+});
+document.addEventListener('keyup', (event) => {
+  if (event.code == "ControlLeft") {
+    ctrlPressed = false;
+  }
+});
+
+Hooks.on('hoverToken', (token, isHover) => {
+  displayCard(token, isHover, ctrlPressed);
 })

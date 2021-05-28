@@ -1,5 +1,6 @@
-<form class="actor-sheet {{cssClass}} threat sheet" autocomplete="off">
+{{ log this}}
 
+<form class="actor-sheet {{cssClass}} threat sheet" autocomplete="off">
     <!-- type -->
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
     <!-- header -->
@@ -14,6 +15,7 @@
         <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.backgroundDescription"}}</a>
+        <a class="item" data-tab="threatCard">{{localize "torgeternity.sheetLabels.threatCard"}}</a>
     </nav>
 
     <section class="sheet-body sheet-content">
@@ -46,6 +48,9 @@
             <div>
             {{editor content=data.details.description target="data.details.description" button=true owner=owner
             editable=editable}}</div>
+        </div>
+        <div class="tab threatCard block" data-group="primary" data-tab="threatCard">
+            <img src="{{data.cardImage}}" class="threat-card" data-edit="data.cardImage" title="threat card" width="100%" /> 
         </div>
         
 

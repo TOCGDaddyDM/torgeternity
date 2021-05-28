@@ -2168,6 +2168,13 @@ form.actor-sheet.threat img.profile-img {
   max-height: 64px;
 }
 
+form.actor-sheet.threat img.threat-card {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 form.actor-sheet.threat input[type="checkbox"] {
   opacity: 0.01;
   position: relative;
