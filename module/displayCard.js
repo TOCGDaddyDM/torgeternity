@@ -20,7 +20,6 @@ export async function displayCard(token, isHover, ctrlPressed) {
 
     if (isHover === true && token.actor.data.type === "threat") {
         let path = token.actor.data.data.cardImage;
-        console.log(token.actor.data)
         if (ctrlPressed) {
             token.displayThreatCard(path);
         }
