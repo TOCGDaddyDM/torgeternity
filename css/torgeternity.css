@@ -2338,6 +2338,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   background-position: center;
 }
 
+form.actor-sheet.threat span.vital-box {
+  margin-right: 15px;
+}
+
 .compact .window-content {
   padding: 1px;
 }
