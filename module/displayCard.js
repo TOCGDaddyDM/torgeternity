@@ -17,15 +17,15 @@ export async function displayCard(token, isHover, ctrlPressed) {
         this.addChild(this.card);
     }
 
-
-    if (isHover === true && token.actor.data.type === "threat") {
-        let path = token.actor.data.data.cardImage;
-        if (ctrlPressed) {
-            token.displayThreatCard(path);
+    if (game.user.isGM || game.settings.get('torgeternity', 'playersSeeThreatCards')) {
+        if (isHover === true && token.actor.data.type === "threat") {
+            let path = token.actor.data.data.cardImage;
+            if (ctrlPressed) {
+                token.displayThreatCard(path);
+            }
+        }
+        else if (isHover === false && token.card?.visible && token.actor.data.type === "threat") {
+            token.card.visible = false
         }
     }
-    else if (isHover === false && token.card?.visible && token.actor.data.type === "threat") {
-        token.card.visible = false
-    }
-
 }
