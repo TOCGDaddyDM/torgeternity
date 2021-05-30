@@ -384,7 +384,12 @@
                 "sizeBonus": 0
             },
             "editstate": "",
-            "cardImage": ""
+            "threatCard": {
+                "playerSide":"",
+                "GMSide":"",
+                "useAltText":false,
+                "nightmare":false
+            }
         }
 
     },
